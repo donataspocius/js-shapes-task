@@ -22,7 +22,7 @@ let pyramid = function () {
       pyramidOut += "&nbsp;";
     }
     for (let j = 0; j < i; j++) {
-      pyramidOut += "&nbsp;*&nbsp;";
+      pyramidOut += "*&nbsp;";
     }
     pyramidOut += "<br>";
   }
