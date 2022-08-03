@@ -11,9 +11,6 @@ btns.forEach((btn) =>
         let triangle = function () {
           let triangleOut = "";
           for (let i = 1; i <= n; i++) {
-            for (let j = 0; j < n - i; j++) {
-              triangleOut += " ";
-            }
             for (let k = 0; k < i; k++) {
               triangleOut += "*";
             }
@@ -26,8 +23,20 @@ btns.forEach((btn) =>
         break;
       }
       case "pyramid": {
-        console.log("hello");
-        break;
+        // let pyramid = function () {
+        //     let pyramidOut = '';
+        //     for (let i = 1; i <= n; i++) {
+        //         // adding spaces
+        //         for (let j = 0; j < n - i; j++) {
+        //         }
+        //         // adding stars
+        //         for () {}
+        //         pyramidOut += '<br>'
+        //     }
+        //     return pyramidOut
+        // }
+        // output.innerHTML = pyramid;
+        // break;
       }
       case "reverse pyramid": {
         console.log("hello");
