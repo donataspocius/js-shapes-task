@@ -2,7 +2,7 @@
 
 let btns = document.querySelectorAll(".btn");
 let output = document.querySelector(".output");
-let n = 7;
+let n = 10;
 
 let triangle = function () {
   let triangleOut = "";
@@ -43,6 +43,31 @@ let revPyramid = function () {
   return revPyramidOut;
 };
 
+let rhomb = function () {
+  let rhombOut = "";
+  for (let i = 1; i <= n * 2; i++) {
+    if (i <= n) {
+      for (let j = 0; j < n - i; j++) {
+        rhombOut += "&nbsp;";
+      }
+      for (let k = 0; k < i; k++) {
+        rhombOut += "*&nbsp;";
+      }
+      rhombOut += "<br>";
+    }
+    if (i > n) {
+      for (let p = n; p < i; p++) {
+        rhombOut += "&nbsp;";
+      }
+      for (let h = 0; h < n * 2 - i; h++) {
+        rhombOut += "*&nbsp;";
+      }
+      rhombOut += "<br>";
+    }
+  }
+  return rhombOut;
+};
+
 btns.forEach((btn) =>
   btn.addEventListener("click", function (e) {
     switch (e.target.textContent) {
@@ -56,6 +81,10 @@ btns.forEach((btn) =>
       }
       case "reverse pyramid": {
         output.innerHTML = revPyramid();
+        break;
+      }
+      case "rhomb": {
+        output.innerHTML = rhomb();
         break;
       }
       case "clear": {
