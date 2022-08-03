@@ -43,20 +43,6 @@ let revPyramid = function () {
   return revPyramidOut;
 };
 
-// let revPyramid = function () {
-//   let revPyramidOut = "";
-//   for (let i = 1; i <= n; i++) {
-//     for (let k = 1; k <= n - i; k++) {
-//       revPyramidOut += "&nbsp;*&nbsp;";
-//     }
-//     for (let j = 0; j < i; j++) {
-//       revPyramidOut += "&nbsp;";
-//     }
-//     revPyramidOut += "<br>";
-//   }
-//   return revPyramidOut;
-// };
-
 btns.forEach((btn) =>
   btn.addEventListener("click", function (e) {
     switch (e.target.textContent) {
