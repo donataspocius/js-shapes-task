@@ -2,7 +2,7 @@
 
 let btns = document.querySelectorAll(".btn");
 let output = document.querySelector(".output");
-let n = 6;
+let n = 7;
 
 let triangle = function () {
   let triangleOut = "";
@@ -32,16 +32,30 @@ let pyramid = function () {
 let revPyramid = function () {
   let revPyramidOut = "";
   for (let i = 1; i <= n; i++) {
-    for (let k = 1; k <= n - i; k++) {
-      revPyramidOut += "&nbsp;*&nbsp;";
-    }
-    for (let j = 0; j < i; j++) {
+    for (let j = 1; j < i; j++) {
       revPyramidOut += "&nbsp;";
+    }
+    for (let k = 0; k <= n - i; k++) {
+      revPyramidOut += "*&nbsp;";
     }
     revPyramidOut += "<br>";
   }
   return revPyramidOut;
 };
+
+// let revPyramid = function () {
+//   let revPyramidOut = "";
+//   for (let i = 1; i <= n; i++) {
+//     for (let k = 1; k <= n - i; k++) {
+//       revPyramidOut += "&nbsp;*&nbsp;";
+//     }
+//     for (let j = 0; j < i; j++) {
+//       revPyramidOut += "&nbsp;";
+//     }
+//     revPyramidOut += "<br>";
+//   }
+//   return revPyramidOut;
+// };
 
 btns.forEach((btn) =>
   btn.addEventListener("click", function (e) {
